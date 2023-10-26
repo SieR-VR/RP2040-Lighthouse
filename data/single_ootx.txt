@@ -1,0 +1,40 @@
+000000000000000001 # Preamble
+    00100001000000001 # Payload Length, uint16 little-endian, this value is 33
+        00000110
+        011011011 # fw_version 872.6
+        10111100
+        011100011
+        00000000
+        100001001 # ID 8400_71BC
+        01111100
+        001001001 # fcal.0.phase
+        10011111
+        001000111 # fcal.1.phase
+        10101101
+        100110011 # fcal.0.tilt
+        10010110
+        101000011 # fcal.1.tilt
+        00000111  # sys.unlock_count
+        000010011 # hw_version 9
+        10101101
+        000101101 # fcal.0.curve
+        11111111
+        000110101 # fcal.1.curve
+        11111111  # accel.dir_x
+        011111111 # accel.dir_y
+        00000001  # accel.dir_z
+        111000111
+        01000000  # fcal.0.gibphase
+        111010101
+        01000011  # fcal.1.gibphase
+        100001101
+        00100000  # fcal.0.gibmag
+        111100101
+        00011110  # fcal.1.gibmag
+        000000001
+        00000000  # mode.current = A
+        000000001 # sys.faults = 0
+    10000111
+    101100011
+    10100011
+    010100011 # CRC32 of Payload
