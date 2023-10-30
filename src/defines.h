@@ -1,5 +1,7 @@
 #define SENSOR_COUNT 1
-#define PIO_CYCLE_TIME 48
+
+#define PIO_CYCLE_TIME 4
+#define NANOSECONDS_PER_TICK 92
 
 #define SM_BUFFER_SIZE 8
 
