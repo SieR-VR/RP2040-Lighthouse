@@ -1,3 +1,6 @@
+#ifndef __SENSOR_STATE_MACHINE_H__
+#define __SENSOR_STATE_MACHINE_H__
+
 #include <stdint.h>
 
 typedef enum {
@@ -28,10 +31,13 @@ typedef struct {
  * @param tick pulse tick, 1 tick = 92ns
  * @return 1 if was the pulse sweep, 0 otherwise
  */
-int sensor_sm_pulse_high(sensor_state_machine_t *sm, uint32_t tick, sweep_t *sweep);
+int sensor_sm_pulse_high(sensor_state_machine_t *sm, uint32_t tick,
+                         sweep_t *sweep);
 
 /**
  * Inputs low pulse to sensor
  * @return sweep_t* if was the pulse sweep, NULL otherwise
  */
 void sensor_sm_pulse_low(sensor_state_machine_t *sm, uint32_t tick);
+
+#endif // __SENSOR_STATE_MACHINE_H__

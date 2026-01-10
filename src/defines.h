@@ -1,3 +1,6 @@
+#ifndef __DEFINES_H__
+#define __DEFINES_H__
+
 #define SENSOR_COUNT 1
 
 #define PIO_CYCLE_TIME 4
@@ -7,3 +10,5 @@
 
 #define SM_DMA_COUNT 5
 #define SM_QUEUE_LIMIT 200
+
+#endif // __DEFINES_H__

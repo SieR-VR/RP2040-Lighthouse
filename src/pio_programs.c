@@ -48,12 +48,12 @@ uint32_t setup_level_monitor_program(uint32_t sm) {
         dma_channel[sm][dma_i == SM_DMA_COUNT - 1 ? 0 : dma_i + 1]);
 
     dma_channel_set_irq0_enabled(dma_channel[sm][dma_i], true);
-	}
+  }
 
-	irq_set_exclusive_handler(DMA_IRQ_0, isr0);
+  irq_set_exclusive_handler(DMA_IRQ_0, isr0);
   irq_set_enabled(DMA_IRQ_0, true);
 
-	for (uint32_t dma_i = 0; dma_i < SM_DMA_COUNT; dma_i++) {
+  for (uint32_t dma_i = 0; dma_i < SM_DMA_COUNT; dma_i++) {
     dma_channel_configure(dma_channel[sm][dma_i], &dma_config[sm][dma_i],
                           sm_buffer[sm][dma_i], &pio->rxf[sm], SM_BUFFER_SIZE,
                           dma_i == 0);
@@ -89,7 +89,7 @@ uint32_t setup_time_stamp_program(uint32_t sm) {
     dma_channel_set_irq0_enabled(dma_channel[sm][dma_i], true);
   }
 
-	for (uint32_t dma_i = 0; dma_i < SM_DMA_COUNT; dma_i++) {
+  for (uint32_t dma_i = 0; dma_i < SM_DMA_COUNT; dma_i++) {
     dma_channel_configure(dma_channel[sm][dma_i], &dma_config[sm][dma_i],
                           sm_buffer[sm][dma_i], &pio->rxf[sm], SM_BUFFER_SIZE,
                           dma_i == 0);

@@ -1,0 +1,7 @@
+Diagnostics:
+  ClangTidy:
+    CheckOptions:
+      readability-identifier-naming.VariableCase: snake_case
+    
+Completion:
+  AllScopes: Yes

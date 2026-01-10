@@ -1,8 +1,11 @@
+#ifndef __PIO_PROGRAMS_H__
+#define __PIO_PROGRAMS_H__
+
 #include "pico/stdlib.h"
 #include "pico/types.h"
 
-#include "hardware/pio.h"
 #include "hardware/dma.h"
+#include "hardware/pio.h"
 
 #include "defines.h"
 
@@ -18,3 +21,5 @@ uint32_t setup_level_monitor_program(uint32_t sm);
 uint32_t setup_time_stamp_program(uint32_t sm);
 
 void isr0();
+
+#endif // __PIO_PROGRAMS_H__

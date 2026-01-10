@@ -4,7 +4,7 @@
 .wrap_target
 level_compare:                        ; start of the level change detection loop
     mov isr, null side 0              ; clear isr
-    in pins, 1 side 0                ; shift pins into isr
+    in pins, 1 side 0                 ; shift pins into isr
     mov x, isr side 0                 ; copy isr into x
     jmp x!=y light_trigger side 0     ; test if any pin has changed level
     jmp level_compare side 0          ; jump to next compare cycle
